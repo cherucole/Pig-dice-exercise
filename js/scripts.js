@@ -41,45 +41,45 @@ takeTurn.prototype.endTurn = function(playerOne, playerTwo) {
 
 };
 $(document).ready(function() {
-      var playerOne = new Player("Player One");
-      var playerTwo = new Player("Player Two");
+  var playerOne = new Player("Player One");
+  var playerTwo = new Player("Player Two");
 
-      var currentTurn = new takeTurn(playerOne);
-      var sum = currentTurn.sum;
-      $("#currentScore").text(sum);
-      $("#playerOneScore").text(playerOne.score);
-      $("#playerTwoScore").text(playerTwo.score);
-      $("#current_player").text(currentTurn.player.playerName);
-      $("form#roll").submit(function(event) {
-        event.preventDefault();
+  var currentTurn = new takeTurn(playerOne);
+  var sum = currentTurn.sum;
+  $("#cumulScore").text(sum);
+  $("#playerOneScore").text(playerOne.score);
+  $("#playerTwoScore").text(playerTwo.score);
+  $("#current_player").text(currentTurn.player.playerName);
+  $("form#roll").submit(function(event) {
+    event.preventDefault();
 
-        var result = currentTurn.diceRoller(playerOne, playerTwo);
+    var result = currentTurn.diceRoller(playerOne, playerTwo);
 
-        $('#diceScore').text(result);
-        $('#currentScore').text(currentTurn.sum);
+    $('#diceScore').text(result);
+    $('#cumulScore').text(currentTurn.sum);
 
-        if ((currentTurn.sum + currentTurn.player.score) >= 100) {
-          if (currentTurn.player == playerOne) {
-            $('#playerOneScore').text(currentTurn.sum + currentTurn.player.score);
-            alert("You are the winner!");
-          } else if (currentTurn.player == playerTwo) {
-            $('#playerTwoScore').text(currentTurn.sum + currentTurn.player.score)
-            alert("You are the winner!");
-          };
-        };
-      });
+    if ((currentTurn.sum + currentTurn.player.score) >= 100) {
+      if (currentTurn.player == playerOne) {
+        $('#playerOneScore').text(currentTurn.sum + currentTurn.player.score);
+        alert("You are the winner!");
+      } else if (currentTurn.player == playerTwo) {
+        $('#playerTwoScore').text(currentTurn.sum + currentTurn.player.score)
+        alert("You are the winner!");
+      };
+    };
+  });
 
-      $("form#endTurn").submit(function(event) {
-       event.preventDefault();
+  $("form#endTurn").submit(function(event) {
+    event.preventDefault();
 
-       currentTurn.endTurn(playerOne, playerTwo);
+    currentTurn.endTurn(playerOne, playerTwo);
 
-       $('#current_player').text(currentTurn.player.userName);
+    $('#current_player').text(currentTurn.player.userName);
 
-       $('#playerOneScore').text(playerOne.score);
-       $('#playerTwoScore').text(playerTwo.score);
+    $('#playerOneScore').text(playerOne.score);
+    $('#playerTwoScore').text(playerTwo.score);
 
-       $('#roll').text(currentTurn.sumNumbers);
-       $('#currentScore').text(currentTurn.sum);
-   });
+    $('#roll').text(currentTurn.sumNumbers);
+    $('#cumulScore').text(currentTurn.sum);
+  });
 });

@@ -14,3 +14,8 @@ background-size: auto;
 #logo{
   height:150px;
 }
+
+#slogan{
+  text-align: center;
+  color: #ff4444;
+}
