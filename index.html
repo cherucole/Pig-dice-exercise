@@ -21,18 +21,20 @@
       <div class="col-md-6">
         <form id="playerOne" class="form-inline">
           <div class="form-group">
-            <h4><label for="playerOneName">Player One Name</label>
-         <input type="text" class="form-control" id="playerOneName" placeholder="Name"></h4>
+            <h4><label for="playerOneName">Player One Points</label>
+         <button type="button" class="btn btn-default"> Points: <span id="playerOneScore"></span></button></h4>
           </div>
+          <br>
         </form>
       </div>
       <div class="col-md-6">
         <form id="playerTwo" class="form-inline">
           <div class="form-group">
-            <h4><label for="playerTwoName">Player Two Name</label>
-            <input type="text" class="form-control" id="playerTwoName" placeholder="Name"></h4>
+            <h4><label for="playerTwoName">Player Two Points</label>
+              <button type="button" class="btn btn-default"> Points: <span id="playerTwoScore"></span></button></h4>
 
           </div>
+          <br>
         </form>
       </div>
     </div>
@@ -48,7 +50,7 @@
 
       <br>
 
-      <h3>Dice Roll</h3>
+      <h3>Dice Roll Value</h3>
       <p id="diceScore"></p>
     </div>
 
@@ -59,15 +61,20 @@
   <div class="row">
     <div class="container">
       <div class="col-md-4">
-        <button type="button" name="button" class="btn btn-success btn-lg">Roll the Dice</button>
+        <form id="roll">
+          <button type="button" class="btn btn-success btn-lg">Roll the Dice</button>
+        </form>
+
 
       </div>
       <div class="col-md-4">
-        <button type="button" name="button" class="btn btn-warning btn-lg">Switch Turns</button>
+        <form id="endTurn">
+          <button type="button" class="btn btn-warning btn-lg">Switch Turns</button>
+        </form>
       </div>
       <div class="col-md-4">
 
-        <button type="button" name="button" class="btn btn-danger btn-lg">Restart Game</button>
+        <button type="button" class="btn btn-danger btn-lg">Restart Game</button>
 
       </div>
     </div>
