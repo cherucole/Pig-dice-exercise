@@ -31,11 +31,11 @@ takeTurn.prototype.endTurn = function(playerOne, playerTwo) {
   if (this.player == playerOne) {
     this.player = playerTwo;
     $("#playerTwo").toggleClass("active");
-    $("playerOne").toggleClass("active");
+    $("#playerOne").toggleClass("active");
   } else if (this.player == playerTwo) {
     this.player = playerOne;
     $("#playerTwo").toggleClass("active");
-    $("playerOne").toggleClass("active");
+    $("#playerOne").toggleClass("active");
 
   };
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
   $("form#roll").submit(function(event) {
     event.preventDefault();
 
-    var result = currentTurn.diceRoller(playerOne, playerTwo);
+    var result = currentTurn.rollDice(playerOne, playerTwo);
 
     $('#diceScore').text(result);
     $('#cumulScore').text(currentTurn.sum);
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     currentTurn.endTurn(playerOne, playerTwo);
 
-    $('#current_player').text(currentTurn.player.userName);
+    $('#current_player').text(currentTurn.player.playerName);
 
     $('#playerOneScore').text(playerOne.score);
     $('#playerTwoScore').text(playerTwo.score);
