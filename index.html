@@ -9,6 +9,7 @@
   <meta charset="utf-8">
   <title>Pig Dice Game</title>
 </head>
+
 <body>
 
   <h1 id="heading">
@@ -20,16 +21,17 @@
       <div class="col-md-6">
         <form id="playerOne" class="form-inline">
           <div class="form-group">
-            <label for="playerOneName">Player One Name</label>
-            <input type="text" class="form-control" id="playerOneName" placeholder="Name">
+            <h4><label for="playerOneName">Player One Name</label>
+         <input type="text" class="form-control" id="playerOneName" placeholder="Name"></h4>
           </div>
         </form>
       </div>
       <div class="col-md-6">
         <form id="playerTwo" class="form-inline">
           <div class="form-group">
-            <label for="playerTwoName">Player Two Name</label>
-            <input type="text" class="form-control" id="playerTwoName" placeholder="Name">
+            <h4><label for="playerTwoName">Player Two Name</label>
+            <input type="text" class="form-control" id="playerTwoName" placeholder="Name"></h4>
+
           </div>
         </form>
       </div>
@@ -50,28 +52,28 @@
       <p id="diceScore"></p>
     </div>
 
- </div>
- <br>
- <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-4">
+        <button type="button" name="button" class="btn btn-success btn-lg">Roll the Dice</button>
 
- <div class="row">
-   <div class="container">
-     <div class="col-md-4">
-       <button type="button" name="button" class="btn btn-success">Roll Dice</button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" name="button" class="btn btn-warning btn-lg">Switch Turn</button>
+      </div>
+      <div class="col-md-4">
 
-     </div>
-     <div class="col-md-4">
-       <button type="button" name="button" class="btn btn-warning">Switch Turn</button>
+        <button type="button" name="button" class="btn btn-danger btn-lg">Restart Game</button>
 
-     </div>
-     <div class="col-md-4">
-       <button type="button" name="button" class="btn btn-danger">Restart Game</button>
-
-     </div>
-   </div>
+      </div>
+    </div>
 
 
- </div>
+  </div>
 
 
 </body>
