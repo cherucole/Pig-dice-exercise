@@ -1,0 +1,14 @@
+body{
+background-image: url("../img/light.jpg");
+}
+
+
+#heading{
+  text-align: center;
+  height: 200px;
+  font-size: 60px;
+}
+
+#logo{
+  height:150px;
+}
