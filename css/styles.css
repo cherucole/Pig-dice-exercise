@@ -5,6 +5,7 @@ background-image: url("../img/light.jpg");
 
 #heading{
   text-align: center;
+  color: black;
   height: 200px;
   font-size: 60px;
 }
